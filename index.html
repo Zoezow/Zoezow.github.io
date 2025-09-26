@@ -88,7 +88,7 @@
 
     /* Hero / Home */
     .hero{
-      display:grid;grid-template-columns: 360px 1fr;gap:28px;align-items:center;margin-bottom:36px
+      display:grid;grid-template-columns: 360px 1fr;gap:28px;align-items:start;margin-bottom:36px
     }
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);border:1px solid var(--glass-border)}
 
@@ -181,6 +181,9 @@
       .photo{width:100%;height:auto}
       .contact-grid{grid-template-columns:1fr}
       header{position:static}
+      .profile-meta h2{font-size:20px}
+      .tagline{font-size:14px}
+      .brief{font-size:14px}
     }
 
   </style>
@@ -254,7 +257,8 @@
             <!-- Download Resume Button -->
             <div style="margin-top:14px;">
               <a class="btn-icon" href="resume.pdf" download title="Download Resume">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM303 505C312.4 514.4 327.6 514.4 336.9 505L400.9 441C410.3 431.6 410.3 416.4 400.9 407.1C391.5 397.8 376.3 397.7 367 407.1L344 430.1L344 344C344 330.7 333.3 320 320 320C306.7 320 296 330.7 296 344L296 430.1L273 407.1C263.6 397.7 248.4 397.7 239.1 407.1C229.8 416.5 229.7 431.7 239.1 441L303.1 505z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM303 505C312.4 514.4 327.6 514.4 336.9 505L400.9 441C410.3 431.6 410.3 416.4 400.9 407.1C391.5 397.8 376.3 397.7 367 407.1L344 430.1L344 344C344 330.7 333.3 320 320 320C306.7 320 296 330.7 296 344L296 430.1L273 407.1C263.6 397.7 248.4 397.7 239.1 407.1C229.8 416.5 229.7 431.7 239.1 441L303.1 505z"/></svg>
+              </a>
             </div>
 
           </div>
@@ -281,17 +285,17 @@
 
           </div>
 
-          <!-- small cards / metrics -->
-          <!-- <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <!-- Metrics Cards (optional) -->
+          <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
             <div class="card reveal" style="flex:1;min-width:160px;text-align:center;padding:14px">
-              <div style="font-size:22px;font-weight:800"></div>
+              <div style="font-size:22px;font-weight:800">3+</div>
               <div style="color:var(--muted);font-size:13px">Years experience</div>
             </div>
             <div class="card reveal" style="flex:1;min-width:160px;text-align:center;padding:14px">
               <div style="font-size:22px;font-weight:800">20+</div>
               <div style="color:var(--muted);font-size:13px">Projects (incl. coursework)</div>
             </div>
-          </div>-->
+          </div>
 
         </div> 
       </section>
@@ -474,8 +478,6 @@
             <p><strong>Email:</strong> <a href="mailto:andrea.logronio2@gmail.com" style="color:var(--muted)">andrea.logronio2@gmail.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+639053461523" style="color:var(--muted)">+63 905 346 1523</a></p>
             <p><strong>Preferred platform:</strong> Email, Telegram (@andreaira), WhatsApp (+639053461523)</p>
-
-            
           </div>
         </div>
       </section>
@@ -524,11 +526,11 @@
         const message = document.getElementById('message').value.trim();
 
         // Customize recipient email below
-        const recipient = 'youremail@example.com';
+        const recipient = 'andrea.logronio2@gmail.com';
         const subject = encodeURIComponent('Portfolio message from ' + name);
         const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
 
-        // mailto fallback — opens user's default mail app. If you prefer Telegram/WhatsApp links, you can customize below.
+        // mailto fallback — opens user's default mail app.
         window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
         // Optional: show small in-page confirmation
